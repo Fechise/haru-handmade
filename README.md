@@ -1,78 +1,45 @@
-# React + TypeScript + Vite
+# Haru Handmade 🌸
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio oficial del frontend de Haru Handmade, una tienda artesanal de cosmetiqueras, monederos y estuches únicos.
 
-Currently, two official plugins are available:
+Este proyecto está construido con **React**, **TypeScript**, **Vite** y **SCSS (CSS Modules)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Inicio Rápido
 
-## React Compiler
+1. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+2. Corre el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📜 Estándares de Commits (Conventional Commits)
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+Para mantener un historial de Git limpio y comprensible, este proyecto utiliza la convención de **Conventional Commits**. 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+Cada mensaje de commit debe tener la siguiente estructura:
+```
+<tipo>: <descripción corta en minúsculas>
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Tipos de commits permitidos:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **`feat`**: (Feature) Una nueva característica o funcionalidad.
+  * *Ejemplo: `feat: agregar carrito de compras`*
+* **`fix`**: (Fix) Solución a un error o bug.
+  * *Ejemplo: `fix: corregir sombra de la tarjeta de productos`*
+* **`style`**: Cambios de diseño, formato o UI (CSS/SCSS) que no afectan la lógica.
+  * *Ejemplo: `style: actualizar paleta de colores del header`*
+* **`refactor`**: Reestructuración del código que no arregla un bug ni añade una funcionalidad (ej. limpiar código).
+  * *Ejemplo: `refactor: simplificar el componente Logo`*
+* **`docs`**: Cambios exclusivos en la documentación.
+  * *Ejemplo: `docs: agregar estándares de commit al readme`*
+* **`chore`**: Mantenimiento, actualización de dependencias o configuración (Vite, ESLint).
+  * *Ejemplo: `chore: agregar carpeta .git al proyecto`*
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+### Buenas prácticas para tus commits:
+- Empieza la descripción con un verbo en infinitivo (`agregar`, `corregir`, `eliminar`).
+- Mantén el mensaje en minúsculas y sin punto final.
+- Sé breve pero directo al grano.
