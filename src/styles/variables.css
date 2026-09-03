@@ -1,0 +1,28 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-hh-primary-300: #e3a3b2;
+  --color-hh-primary-500: #d66479;
+  --color-hh-primary-700: #af2b42;
+  --color-hh-secondary-300: #cdb287;
+  --color-hh-secondary-500: #b08c56;
+  --color-hh-secondary-700: #85663d;
+  --color-hh-accent-300: #e5a4b2;
+  --color-hh-accent-500: #cd3752;
+  --color-hh-accent-700: #862a3a;
+  --color-hh-neutral-100: #ffffff;
+  --color-hh-neutral-300: #c6c2c2;
+  --color-hh-neutral-500: #999393;
+  --color-hh-neutral-700: #595050;
+  --color-hh-neutral-900: #1c1818;
+  --typography-font-family-heading: 'Inter', sans-serif;
+  --typography-font-family-body: 'Montserrat', sans-serif;
+  --typography-font-family-alt: 'Inter', sans-serif;
+  --typography-font-size-h1: 48px;
+  --typography-font-size-h2: 32px;
+  --typography-font-size-h3: 24px;
+  --typography-font-size-h4: 18px;
+  --typography-font-size-p: 16px;
+}

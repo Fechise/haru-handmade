@@ -1,0 +1,51 @@
+/* Base styles for all links */
+.cardBase {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 16px;
+  //border: 1px solid var(--color-hh-primary-700);
+  /* Usamos un tono más oscuro para que parezca el hilo fino de figma */
+  /* Drop shadow */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* The pink floating title box */
+.titleBox {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  /* Glued to the right inner edge */
+  background-color: var(--color-hh-primary-500);
+  padding: 16px 24px;
+  border-radius: 16px 0 0 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease;
+}
+
+.cardBase:hover .titleBox {
+  background-color: var(--color-hh-primary-700);
+}
+
+.titleText {
+  margin: 0;
+  color: var(--color-hh-neutral-100);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  /* A nice touch for uppercase text */
+}

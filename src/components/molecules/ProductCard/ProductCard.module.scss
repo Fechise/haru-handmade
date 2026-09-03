@@ -1,0 +1,33 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.image {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-hh-neutral-900);
+}
+
+.button {
+  width: 100%;
+}

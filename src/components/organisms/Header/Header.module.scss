@@ -1,0 +1,33 @@
+.header {
+  background-color: var(--color-hh-primary-500);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: var(--color-hh-neutral-100);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    /* We will need a mobile menu later, hiding for now on small screens */
+  }
+}
+
+.separator {
+  color: var(--color-hh-neutral-100);
+  opacity: 0.5;
+  margin: 0 4px;
+}

@@ -1,0 +1,21 @@
+.input {
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid var(--color-hh-primary-300);
+  border-radius: 12px;
+  font-family: var(--typography-font-family-body);
+  font-size: var(--typography-font-size-p);
+  color: var(--color-hh-neutral-700);
+  background-color: var(--color-hh-neutral-100);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:focus {
+    border-color: var(--color-hh-primary-500);
+    box-shadow: 0 0 0 3px rgba(227, 163, 178, 0.3);
+  }
+
+  &::placeholder {
+    color: var(--color-hh-neutral-500);
+  }
+}

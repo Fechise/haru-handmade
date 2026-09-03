@@ -1,0 +1,87 @@
+@import './styles/variables.css';
+
+:root {
+  font-family: var(--typography-font-family-body);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-hh-neutral-900);
+  background-color: var(--color-hh-neutral-100);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-hh-primary-700);
+  margin-top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px; /* Standard max width */
+  margin: 0 auto;
+  padding: 0 100px; /* Margin from Figma specs */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px; /* Smaller margin on mobile */
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px; /* Gutter from Figma specs */
+}
+
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+@media (max-width: 768px) {
+  [class^="col-"] {
+    grid-column: span 12; /* Stack on mobile */
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-hh-neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-hh-primary-300);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-hh-primary-500);
+}
