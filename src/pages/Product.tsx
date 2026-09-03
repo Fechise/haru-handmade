@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useParams, Link } from 'react-router-dom';
 import Typography from '../components/atoms/Typography/Typography';
 import Image from '../components/atoms/Image/Image';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Logo from '../../molecules/Logo/Logo';
 import NavItem from '../../molecules/NavItem/NavItem';
 import styles from './Header.module.scss';

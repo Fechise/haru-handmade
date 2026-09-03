@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import Typography from '../../atoms/Typography/Typography';
 import styles from './CategoryCard.module.scss';

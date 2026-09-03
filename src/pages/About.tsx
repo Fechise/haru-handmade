@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Typography from '../components/atoms/Typography/Typography';
 import Image from '../components/atoms/Image/Image';
 import { aboutContent } from '../data/aboutContent';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './LogoText.module.scss';
 
 export default function LogoText() {

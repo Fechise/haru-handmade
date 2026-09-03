@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Typography from '../../atoms/Typography/Typography';
 import Image from '../../atoms/Image/Image';
 import Button from '../../atoms/Button/Button';

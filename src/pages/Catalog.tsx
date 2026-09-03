@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Typography from '../components/atoms/Typography/Typography';
 import Input from '../components/atoms/Input/Input';
 import ProductCard from '../components/molecules/ProductCard/ProductCard';

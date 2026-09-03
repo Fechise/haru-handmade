@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './LogoIcon.module.scss';
 
 export default function LogoIcon() {
