@@ -13,19 +13,19 @@ export const homeContent = {
       id: "cat-1",
       title: "Cosmetiqueras",
       imageUrl: cosmetiquerasImg,
-      to: "/catalog"
+      to: "/catalog?category=cosmetiqueras"
     },
     {
       id: "cat-2",
       title: "Monederos",
       imageUrl: cosmetiquerasImg,
-      to: "/catalog"
+      to: "/catalog?category=monederos"
     },
     {
       id: "cat-3",
       title: "Estuches",
       imageUrl: cosmetiquerasImg,
-      to: "/catalog"
+      to: "/catalog?category=estuches"
     }
   ]
 };

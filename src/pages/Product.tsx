@@ -1,8 +1,8 @@
 
 import { useParams, Link } from 'react-router-dom';
 import Typography from '../components/atoms/Typography/Typography';
-import Image from '../components/atoms/Image/Image';
 import Button from '../components/atoms/Button/Button';
+import ImageGallery from '../components/molecules/ImageGallery/ImageGallery';
 import { catalogContent } from '../data/catalogContent';
 
 export default function Product() {
@@ -22,20 +22,16 @@ export default function Product() {
     alert(`Añadido al carrito: ${product.title}`);
   };
 
+  const imagesToRender = product.images && product.images.length > 0 
+    ? product.images 
+    : [product.imageUrl];
+
   return (
     <div className="grid" style={{ padding: '40px 0', alignItems: 'flex-start' }}>
       
-      {/* Left Column: Image */}
+      {/* Left Column: Image Gallery */}
       <div className="col-6">
-        <Image 
-          src={product.imageUrl} 
-          alt={product.title} 
-          aspectRatio="portrait"
-          style={{ 
-            border: '2px solid var(--color-hh-primary-300)', 
-            borderRadius: '16px' 
-          }}
-        />
+        <ImageGallery images={imagesToRender} altPrefix={product.title} />
       </div>
 
       {/* Right Column: Content */}

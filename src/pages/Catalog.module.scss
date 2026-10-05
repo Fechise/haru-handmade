@@ -1,0 +1,92 @@
+.catalogWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.desktopHeader {
+  display: flex;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileTitleWrapper {
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: block;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.mobileBadgeWrapper {
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+}
+
+.pageTitle {
+  margin: 0;
+  color: var(--color-hh-primary-500);
+}
+
+.badgeVerticalAlign {
+  transform: translateY(2px);
+}
+
+.emptyState {
+  padding: 48px 0;
+  text-align: center;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filterGrid {
+  /* Container no longer animates all at once, children will stagger */
+}
+
+.productItem {
+  opacity: 0;
+  animation: fadeInSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@for $i from 1 through 12 {
+  .productItem:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.08s};
+  }
+}
+
+.animateHeader {
+  animation: slideInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

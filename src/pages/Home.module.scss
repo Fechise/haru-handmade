@@ -1,0 +1,87 @@
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  /* Paddings removed because main container already has padding */
+
+  /* Bunny Background */
+  background-image: url('../assets/BunnyHero-BG.webp');
+  background-repeat: no-repeat;
+  background-position: right -50px top 0;
+  /* Slightly shifted if needed, adjust to fit */
+  background-size: 55%;
+  /* The bunny takes up about half the screen on the right */
+}
+
+@media (max-width: 1024px) {
+  .homeWrapper {
+    background-size: 70%;
+    background-position: right top;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeWrapper {
+    background-image: none;
+  }
+}
+
+/* Adds depth to the main hero title */
+.heroTitle {
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  color: var(--color-hh-primary-500);
+}
+
+/* Animations */
+.heroContent {
+  animation: slideInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.heroSection {
+  align-items: center;
+}
+
+.heroTextColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.categoriesSection {
+  margin-top: 48px;
+  /* Adds extra separation between hero text and categories */
+
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
+}
+
+.categoryItem {
+  opacity: 0;
+  animation: slideInUp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.categoryItem:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.categoryItem:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.categoryItem:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

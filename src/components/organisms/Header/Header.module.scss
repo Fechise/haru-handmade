@@ -15,19 +15,87 @@
 
 .nav {
   display: flex;
+  height: 100%;
+}
+
+.navItems {
+  display: flex;
   gap: 16px;
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .nav {
-    display: none;
-    /* We will need a mobile menu later, hiding for now on small screens */
-  }
+.mobileMenuButton {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-hh-neutral-100);
+  cursor: pointer;
+  padding: 8px;
+  z-index: 110;
 }
 
 .separator {
   color: var(--color-hh-neutral-100);
   opacity: 0.5;
   margin: 0 4px;
+}
+
+.overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--component-header-mobile-nav-background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    /* Bunny Background */
+    background-image: url('../../../assets/BunnyHero-BG.webp');
+    background-repeat: no-repeat;
+    background-position: center bottom -20px;
+    background-size: 80%;
+  }
+
+  .navOpen {
+    right: 0;
+  }
+
+  .navItems {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
 }

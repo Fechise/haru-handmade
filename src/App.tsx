@@ -13,15 +13,17 @@ function App() {
       <div className="app-container">
         <Header />
 
-        <main className="container" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+        <div className="scroll-area">
+          <main className="container" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/catalog" element={<Catalog />} />
+              <Route path="/product/:id" element={<Product />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
       </div>
     </Router>
   );

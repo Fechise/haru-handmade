@@ -1,16 +1,16 @@
 import CategoryCard from '../components/molecules/CategoryCard/CategoryCard';
 import Typography from '../components/atoms/Typography/Typography';
-import Image from '../components/atoms/Image/Image';
 import { homeContent } from '../data/homeContent';
+import styles from './Home.module.scss';
 
 export default function Home() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '80px' }}>
+    <div className={styles.homeWrapper}>
       
       {/* Hero Section */}
-      <section className="grid" style={{ alignItems: 'center' }}>
-        <div className="col-7" style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          <Typography variant="h1" style={{ lineHeight: '1.2' }}>
+      <section className={`grid ${styles.heroContent} ${styles.heroSection}`}>
+        <div className={`col-6 ${styles.heroTextColumn}`}>
+          <Typography variant="h1" className={styles.heroTitle}>
             {homeContent.hero.title}
           </Typography>
           <Typography variant="body">
@@ -20,19 +20,12 @@ export default function Home() {
             {homeContent.hero.paragraph2}
           </Typography>
         </div>
-        <div className="col-5">
-          <Image 
-            src={homeContent.hero.image} 
-            alt={homeContent.hero.imageAlt} 
-            aspectRatio="square" 
-          />
-        </div>
       </section>
 
       {/* Categories Section */}
-      <section className="grid">
+      <section className={`grid ${styles.categoriesSection}`}>
         {homeContent.categories.map((category) => (
-          <div className="col-4" key={category.id}>
+          <div className={`col-4 ${styles.categoryItem}`} key={category.id}>
             <CategoryCard 
               title={category.title} 
               imageUrl={category.imageUrl} 

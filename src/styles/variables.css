@@ -3,24 +3,43 @@
  */
 
 :root {
+  --color-hh-primary-100: #f7dfe4;
   --color-hh-primary-300: #e3a3b2;
   --color-hh-primary-500: #d66479;
   --color-hh-primary-700: #af2b42;
+  --color-hh-primary-700-alpha85: rgba(175, 43, 66, 0.85);
   --color-hh-secondary-300: #cdb287;
   --color-hh-secondary-500: #b08c56;
   --color-hh-secondary-700: #85663d;
   --color-hh-accent-300: #e5a4b2;
   --color-hh-accent-500: #cd3752;
   --color-hh-accent-700: #862a3a;
+  --color-hh-neutral-50: #faf9f9;
   --color-hh-neutral-100: #ffffff;
+  --color-hh-neutral-200: #f4f4f4;
   --color-hh-neutral-300: #c6c2c2;
   --color-hh-neutral-500: #999393;
   --color-hh-neutral-700: #595050;
   --color-hh-neutral-900: #1c1818;
+  --color-background-page: #faf9f9;
+  --color-background-surface: #ffffff;
+  --color-background-input: #f4f4f4;
+  --color-background-primary-wash: #f7dfe4;
+  --color-background-nav-overlay: rgba(175, 43, 66, 0.85);
+  --color-border-subtle: #c6c2c2;
+  --component-product-card-background: #ffffff;
+  --component-product-card-border: 1px solid #c6c2c2;
+  --component-product-card-shadow-default: 0 4px 14px rgba(0, 0, 0, 0.05);
+  --component-product-card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --component-select-active-background: #f7dfe4;
+  --component-header-mobile-nav-background: rgba(175, 43, 66, 0.85);
+  --shadow-soft: 0 4px 14px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
   --typography-font-family-heading: 'Inter', sans-serif;
   --typography-font-family-body: 'Montserrat', sans-serif;
   --typography-font-family-alt: 'Inter', sans-serif;
   --typography-font-size-h1: 48px;
+  --typography-font-size-h1-mobile: 32px;
   --typography-font-size-h2: 32px;
   --typography-font-size-h3: 24px;
   --typography-font-size-h4: 18px;

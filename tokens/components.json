@@ -1,0 +1,22 @@
+{
+  "component": {
+    "productCard": {
+      "background": { "value": "{color.background.surface}" },
+      "border": { "value": "1px solid {color.border.subtle}" },
+      "shadow": {
+        "default": { "value": "{shadow.soft}" },
+        "hover": { "value": "{shadow.hover}" }
+      }
+    },
+    "select": {
+      "active": {
+        "background": { "value": "{color.background.primaryWash}" }
+      }
+    },
+    "header": {
+      "mobileNav": {
+        "background": { "value": "{color.background.navOverlay}" }
+      }
+    }
+  }
+}

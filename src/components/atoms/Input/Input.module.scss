@@ -1,3 +1,19 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  left: 16px;
+  color: var(--color-hh-primary-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .input {
   width: 100%;
   padding: 16px 24px;
@@ -6,7 +22,7 @@
   font-family: var(--typography-font-family-body);
   font-size: var(--typography-font-size-p);
   color: var(--color-hh-neutral-700);
-  background-color: var(--color-hh-neutral-100);
+  background-color: var(--color-background-input);
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -18,4 +34,8 @@
   &::placeholder {
     color: var(--color-hh-neutral-500);
   }
+}
+
+.withIcon {
+  padding-left: 48px;
 }

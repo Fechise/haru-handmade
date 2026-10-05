@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: var(--color-hh-neutral-900);
-  background-color: var(--color-hh-neutral-100);
+  background-color: var(--color-background-page);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
+  width: 100%;
   max-width: 1440px; /* Standard max width */
   margin: 0 auto;
   padding: 0 100px; /* Margin from Figma specs */

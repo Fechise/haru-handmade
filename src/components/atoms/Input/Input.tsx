@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { type ReactNode } from 'react';
 import styles from './Input.module.scss';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'icon'> {
   className?: string;
+  icon?: ReactNode;
 }
 
-export default function Input({ className = '', ...props }: InputProps) {
+export default function Input({ className = '', icon, ...props }: InputProps) {
   return (
-    <input className={`${styles.input} ${className}`} {...props} />
+    <div className={`${styles.wrapper} ${className}`}>
+      {icon && <span className={styles.icon}>{icon}</span>}
+      <input className={`${styles.input} ${icon ? styles.withIcon : ''}`} {...props} />
+    </div>
   );
 }

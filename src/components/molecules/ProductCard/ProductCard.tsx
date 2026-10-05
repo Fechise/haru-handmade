@@ -1,24 +1,30 @@
-
-import Typography from '../../atoms/Typography/Typography';
-import Image from '../../atoms/Image/Image';
-import Button from '../../atoms/Button/Button';
+import { Link } from 'react-router-dom';
 import styles from './ProductCard.module.scss';
 
 interface ProductCardProps {
   id: string;
   title: string;
   imageUrl: string;
+  description?: string;
+  price?: number;
 }
 
-export default function ProductCard({ id, title, imageUrl }: ProductCardProps) {
+export default function ProductCard({ id, title, imageUrl, description, price = 10 }: ProductCardProps) {
   return (
     <div className={styles.card}>
-      <Image src={imageUrl} alt={title} aspectRatio="video" className={styles.image} />
+      <div className={styles.imageWrapper}>
+        <img src={imageUrl} alt={title} className={styles.image} />
+      </div>
       <div className={styles.content}>
-        <Typography variant="h4" className={styles.title}>{title}</Typography>
-        <Button to={`/product/${id}`} variant="primary" className={styles.button}>
-          Ver detalles
-        </Button>
+        <h4 className={styles.title}>{title}</h4>
+        {description && <p className={styles.description}>{description}</p>}
+        
+        <div className={styles.footer}>
+          <span className={styles.price}>${price}</span>
+          <Link to={`/product/${id}`} className={styles.button}>
+            Comprar
+          </Link>
+        </div>
       </div>
     </div>
   );

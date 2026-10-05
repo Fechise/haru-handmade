@@ -1,0 +1,18 @@
+{
+  "color": {
+    "background": {
+      "page": { "value": "{color.hh.neutral.50}" },
+      "surface": { "value": "{color.hh.neutral.100}" },
+      "input": { "value": "{color.hh.neutral.200}" },
+      "primaryWash": { "value": "{color.hh.primary.100}" },
+      "navOverlay": { "value": "{color.hh.primary.700Alpha85}" }
+    },
+    "border": {
+      "subtle": { "value": "{color.hh.neutral.300}" }
+    }
+  },
+  "shadow": {
+    "soft": { "value": "0 4px 14px rgba(0, 0, 0, 0.05)" },
+    "hover": { "value": "0 8px 24px rgba(0, 0, 0, 0.1)" }
+  }
+}
